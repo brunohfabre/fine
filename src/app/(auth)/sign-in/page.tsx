@@ -2,6 +2,7 @@ import { headers } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { auth } from '@/lib/auth'
 import { GithubButton } from './_components/github-button'
+import { GoogleButton } from './_components/google-button'
 
 export default async function SignIn() {
   const session = await auth.api.getSession({
@@ -17,6 +18,7 @@ export default async function SignIn() {
       <span>sign in</span>
 
       <GithubButton />
+      <GoogleButton />
     </div>
   )
 }
